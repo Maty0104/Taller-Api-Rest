@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>feriados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+          *ngFor="let data of data; let i=index">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>{{data.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <span class="text-primary" ><b>Fecha: </b>{{data.date}}</span>
+              <br>
+              <span class="text-primary"><b>Tipo de feriado: </b>{{data.type}}</span>
+              <br>
+              <span class="text-primary">{{data.extra}}</span>
+              <br>
+              <span class="text-primary"><b>Renunciable:</b> {{data.inaliable}} </span>
+            </ion-card-content>
+          </ion-card>
+
+
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
